@@ -6,15 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         sh 'echo "login in $HOST_NAME ..."'
-        sh '''echo "wait for update code ...."
-sh "sleep 5"'''
-        sh '''echo "code building "
-sh "sleep 10"'''
-        sh '''echo "Testing ..."
-sh "sleep 10"'''
       }
     }
 
