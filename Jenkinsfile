@@ -6,9 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('error') {
+    stage('') {
       steps {
-        sh 'echo "login in $HOST_NAME ..."'
+        sh 'echo "This is a GitHub repository"'
       }
     }
 
