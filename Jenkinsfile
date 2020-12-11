@@ -27,6 +27,12 @@ pipeline {
           }
         }
 
+        stage('') {
+          steps {
+            echo 'EM'
+          }
+        }
+
       }
     }
 
