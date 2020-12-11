@@ -6,9 +6,33 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('Fist stage') {
       steps {
-        sh 'echo "This is a GitHub repository"'
+        echo 'This is GitHub repository'
+        sh 'echo "$HOST_NAME"'
+      }
+    }
+
+    stage('Second Stage') {
+      parallel {
+        stage('Second Stage') {
+          steps {
+            sleep 10
+          }
+        }
+
+        stage('Another branch') {
+          steps {
+            build(job: 'example', wait: true)
+          }
+        }
+
+      }
+    }
+
+    stage('Last stage') {
+      steps {
+        echo 'Demo Done'
       }
     }
 
